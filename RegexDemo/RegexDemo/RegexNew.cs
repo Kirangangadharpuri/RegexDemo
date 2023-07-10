@@ -19,6 +19,7 @@ namespace RegexDemo
             // we have created object of class
             // we have pass a parameter pattern in given class constructor
             Regex regex = new Regex(pattern);
+            //Ismatch return true if its matechess the string otherwise it return false
             if(regex.IsMatch("kiran"))
             {
                 Console.WriteLine("String is match the pattern");
@@ -27,6 +28,21 @@ namespace RegexDemo
             {
                 Console.WriteLine("string doen not match the pattern");
             }
+        }
+
+        public void CheckName(string name)
+        {
+            //? will check value we are using that return th same thing.(0 or 1) 
+            string myName = "^[A-Z][a-z]{3,}$";
+            if(Regex.IsMatch(name,myName))
+            {
+                Console.WriteLine("String is match the pattern");
+            }
+            else
+            {
+                Console.WriteLine("string doen not match the pattern");
+            }
+
         }
     }
 }

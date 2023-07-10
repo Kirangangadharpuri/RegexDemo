@@ -12,6 +12,7 @@ namespace RegexDemo
         {
             RegexNew regexNew = new RegexNew();
             regexNew.MyRegex();
+            regexNew.CheckName("Kiran");
         }
     }
 }
