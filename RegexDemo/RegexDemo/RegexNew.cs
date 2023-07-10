@@ -57,6 +57,17 @@ namespace RegexDemo
                 Console.WriteLine("string doen not match the pattern");
             }
         }
-        
+        public void ValidateMobileNumber(string mobilNumber)
+        {
+            string myNumber = "^[0-9]{2}[ ][7-9]{1}[0-9]{9}$";
+            if(Regex.IsMatch(mobilNumber,myNumber))
+            {
+                Console.WriteLine("String is match the pattern");
+            }
+            else
+            {
+                Console.WriteLine("String is not maching");
+            }
+        }
     }
 }
